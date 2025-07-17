@@ -34,6 +34,12 @@ const CV = () => {
                 lamiaa404
               </a>
             </div>
+            <div className="flex items-center">
+              <FaLinkedin className="mr-2 text-emerald-500" />
+              <a href="https://www.linkedin.com/in/lamiaa-hassan-88667794" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                LinkedIn
+              </a>
+            </div>
           </div>
         </header>
 
