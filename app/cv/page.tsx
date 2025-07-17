@@ -147,17 +147,49 @@ const CV = () => {
               <div className="space-y-4">
                 {[
                   {
+                    title: "Blood-brain barrier crossing renin-angiotensin drugs and cognition in the elderly: a meta-analysis",
+                    journal: "Hypertension 78(3), 629-643 (2021)",
+                    doi: "10.1161/HYPERTENSIONAHA.121.17049"
+                  },
+                  {
+                    title: "Relationship between caries experience and demarcated hypomineralised lesions in the permanent dentition of 15-year-olds",
+                    journal: "Clinical Oral Investigations 22(5), 2013-2019 (2018)",
+                    doi: "10.1007/s00784-017-2291-z"
+                  },
+                  {
+                    title: "Is there an association between asthma and dental caries and molar incisor hypomineralisation?",
+                    journal: "Caries Research 54(1), 87-95 (2020)",
+                    doi: "10.1159/000504168"
+                  },
+                  {
+                    title: "Associations of occupational and leisure-time physical activity with all-cause mortality: an individual participant data meta-analysis",
+                    journal: "British Journal of Sports Medicine 58(24), 1527-1538 (2024)",
+                    doi: "10.1136/bjsports-2023-107174"
+                  },
+                  {
+                    title: "Socioeconomic disparities in head and neck cancer survival in Germany: a causal mediation analysis",
+                    journal: "Journal of Cancer Research and Clinical Oncology 147(5), 1325-1334 (2021)",
+                    doi: "10.1007/s00432-021-03531-8"
+                  },
+                  {
+                    title: "Cardiovascular risk factors, living and ageing in Halle: the CARLA study",
+                    journal: "European Journal of Epidemiology 37(1), 103-116 (2022)",
+                    doi: "10.1007/s10654-021-00833-8"
+                  },
+                  {
+                    title: "Correlation of Increased Soluble Tumor Necrosis Factor Receptor 1 with Mortality in Non-Small-Cell Lung Cancer Patients",
+                    journal: "Cancers 16(3), 525 (2024)",
+                    doi: "10.3390/cancers16030525"
+                  },
+                  {
                     title: "Stereotactic Ablative Radiotherapy versus Video-Assisted Lobectomy for Operable Stage I Non-small-cell Lung Cancer",
                     journal: "Research Square (2024)",
                     doi: "10.21203/rs.3.rs-4268816/v1"
                   },
                   {
-                    title: "Socioeconomic Disparities in Head and Neck Cancer Survival in Germany",
-                    journal: "Journal of Cancer Research and Clinical Oncology (2021)"
-                  },
-                  {
                     title: "Physical Activity Trajectories at Older Age and All-Cause Mortality",
-                    journal: "Plos One (2023)"
+                    journal: "PLoS One 18(1), e0280878 (2023)",
+                    doi: "10.1371/journal.pone.0280878"
                   }
                 ].map((pub, index) => (
                   <div key={index} className="border-l-2 border-emerald-500 pl-3 py-1">
