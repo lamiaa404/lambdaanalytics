@@ -122,26 +122,19 @@ const CV = () => {
             <section className="bg-white/70 dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-4">Fähigkeiten</h2>
               
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-medium text-slate-700 dark:text-slate-300 mb-2">Programmierung & Tools</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Python', 'R', 'SQL', 'SAS', 'Git', 'Docker', 'Jupyter', 'VS Code'].map(skill => (
-                      <span key={skill} className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-sm rounded-full">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-medium text-slate-700 dark:text-slate-300 mb-2">Methoden</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Kausale Inferenz', 'Machine Learning', 'Target Trial Emulation', 'Überlebensanalyse', 'Versorgungsforschung'].map(skill => (
-                      <span key={skill} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">
-                        {skill}
-                      </span>
-                    ))}
+              <div className="space-y-6">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-4">Core Competencies</h3>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <span className="px-6 py-3 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-lg font-medium rounded-lg">
+                      Web Development
+                    </span>
+                    <span className="px-6 py-3 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-lg font-medium rounded-lg">
+                      Data Visualization
+                    </span>
+                    <span className="px-6 py-3 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-lg font-medium rounded-lg">
+                      Data Analytics
+                    </span>
                   </div>
                 </div>
               </div>
