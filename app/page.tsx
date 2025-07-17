@@ -71,7 +71,7 @@ const About = () => (
           Entwicklung kosteneffizienter Alternativen zu teuren Standardlösungen.
         </p>
         <p className="text-lg mb-8">
-          Mit unserem erfolgreichen Projekt für das Krebsregister Sachsen-Anhalt haben wir bewiesen, dass 
+          Mit unserem erfolgreichen Projekt für das Landeskrebsregister haben wir bewiesen, dass 
           maßgeschneiderte Lösungen nicht nur günstiger, sondern auch besser an die spezifischen Anforderungen 
           unserer Kunden angepasst sein können.
         </p>
@@ -109,7 +109,7 @@ const Work = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
           {
-            title: "Krebsregister Sachsen-Anhalt",
+            title: "Landeskrebsregister Dashboard",
             description: "Maßgeschneidertes Dashboard für die Analyse von Krebsregisterdaten mit interaktiven Visualisierungen und Berichtsfunktionen.",
             features: ["Echtzeit-Datenanalyse", "Individuelle Berichtsvorlagen", "Benutzerfreundliche Oberfläche"]
           },
