@@ -35,12 +35,14 @@ const Hero = () => (
             >
               Kontakt aufnehmen
             </Link>
-            <Link 
-              href="#work" 
-              className="border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium py-3 px-6 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            <a 
+              href="https://cancer-registry-lamiaa-hassans-projects.vercel.app" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium py-3 px-6 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-block"
             >
               Meine Arbeit
-            </Link>
+            </a>
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
@@ -111,7 +113,8 @@ const Work = () => (
           {
             title: "Landeskrebsregister Dashboard",
             description: "Maßgeschneidertes Dashboard für die Analyse von Krebsregisterdaten mit interaktiven Visualisierungen und Berichtsfunktionen.",
-            features: ["Echtzeit-Datenanalyse", "Individuelle Berichtsvorlagen", "Benutzerfreundliche Oberfläche"]
+            features: ["Echtzeit-Datenanalyse", "Individuelle Berichtsvorlagen", "Benutzerfreundliche Oberfläche"],
+            url: "https://cancer-registry-lamiaa-hassans-projects.vercel.app"
           },
           {
             title: "Epidemiologische Auswertungen",
@@ -123,29 +126,48 @@ const Work = () => (
             description: "Zentrale Plattform zur Integration verschiedener Datenquellen für umfassende Analysen.",
             features: ["Automatisierte Datenaufbereitung", "Sichere Datenübertragung", "Skalierbare Architektur"]
           }
-        ].map((project, index) => (
-          <div key={index} className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col h-full">
-            <div className="h-48 bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center p-6">
-              <span className="text-2xl text-white font-semibold text-center">{project.title}</span>
-            </div>
-            <div className="p-6 flex-grow flex flex-col">
-              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-slate-600 dark:text-slate-400 mb-4 flex-grow">
-                {project.description}
-              </p>
-              <div className="mt-4 space-y-2">
-                {project.features.map((feature, i) => (
-                  <div key={i} className="flex items-start">
-                    <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-slate-700 dark:text-slate-300">{feature}</span>
-                  </div>
-                ))}
+        ].map((project, index) => {
+          const content = (
+            <div className="h-full flex flex-col">
+              <div className="h-48 bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center p-6">
+                <span className="text-2xl text-white font-semibold text-center">{project.title}</span>
+              </div>
+              <div className="p-6 flex-grow flex flex-col">
+                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 mb-4 flex-grow">
+                  {project.description}
+                </p>
+                <div className="mt-4 space-y-2">
+                  {project.features.map((feature, i) => (
+                    <div key={i} className="flex items-start">
+                      <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-slate-700 dark:text-slate-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+
+          return (
+            <div key={index} className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col h-full">
+              {project.url ? (
+                <a 
+                  href={project.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  {content}
+                </a>
+              ) : (
+                content
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   </section>
