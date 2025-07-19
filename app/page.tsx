@@ -12,11 +12,14 @@ const Hero = () => (
     <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
     <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
-    <div className="container mx-auto px-4">
-      <div className="flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 mb-10 md:mb-0">
-          <div className="inline-block mb-6 px-4 py-1.5 text-sm font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/30 rounded-full border border-emerald-200 dark:border-emerald-800">
-            Lambda: moderne Datenlösungen
+    <div className="container mx-auto px-4 lg:px-8">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center">
+        <div className="w-full lg:w-2/5">
+          <div className="flex flex-col items-start mb-6">
+            <span className="text-4xl font-bold text-emerald-500 dark:text-emerald-400 mb-2">λ</span>
+            <span className="inline-block px-4 py-1.5 text-sm font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/30 rounded-full border border-emerald-200 dark:border-emerald-800">
+              Lambda: moderne Datenlösungen
+            </span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-600 dark:from-white dark:via-slate-200 dark:to-emerald-400">
             Datenlösungen für die <span className="text-emerald-600 dark:text-emerald-400">Gesundheitsforschung</span>
@@ -45,13 +48,19 @@ const Hero = () => (
             </a>
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-500/10 to-blue-500/10 dark:from-emerald-500/5 dark:to-blue-500/5 blur-3xl animate-pulse-slow"></div>
-            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-emerald-500/30 dark:border-emerald-400/30 flex items-center justify-center bg-white/10 dark:bg-black/10 backdrop-blur-sm shadow-2xl">
-              <span className="text-9xl font-bold text-emerald-600 dark:text-emerald-400">λ</span>
-            </div>
-            <div className="absolute -inset-4 rounded-full border-2 border-emerald-500/20 dark:border-emerald-400/20 animate-spin-slow" style={{ animationDuration: '30s' }}></div>
+        <div className="w-full">
+          <div className="relative w-full lg:w-[32vw] max-w-3xl ml-auto mr-0 lg:mr-0 lg:translate-x-8 rounded-xl overflow-hidden shadow-2xl border-2 border-emerald-500/30 dark:border-emerald-400/30">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="w-full h-auto rounded-lg"
+              poster="/data/Screen_Recording_2025_07_19_at_16_26_37_V1_poster.jpg"
+            >
+              <source src="/data/Screen_Recording_2025_07_19_at_16_26_37_V1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>

@@ -32,8 +32,8 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col">
           <nav className="w-full py-4 px-6 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
             <div className="container mx-auto flex justify-between items-center">
-              <Link href="/" className="text-xl font-bold text-emerald-600 dark:text-emerald-400">
-                Lambda
+              <Link href="/" className="text-xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center">
+                <span className="mr-1">λ</span> Lambda
               </Link>
               <div className="flex space-x-6">
                 <Link href="/" className="text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
