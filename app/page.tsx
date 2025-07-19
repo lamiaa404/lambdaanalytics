@@ -36,7 +36,7 @@ const Hero = () => (
               Kontakt aufnehmen
             </Link>
             <a 
-              href="https://cancer-registry-lamiaa-hassans-projects.vercel.app" 
+              href="https://lambda-cancer-registry.vercel.app" 
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium py-3 px-6 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-block"
@@ -114,7 +114,7 @@ const Work = () => (
             title: "Landeskrebsregister Dashboard",
             description: "Maßgeschneidertes Dashboard für die Analyse von Krebsregisterdaten mit interaktiven Visualisierungen und Berichtsfunktionen.",
             features: ["Echtzeit-Datenanalyse", "Individuelle Berichtsvorlagen", "Benutzerfreundliche Oberfläche"],
-            url: "https://cancer-registry-lamiaa-hassans-projects.vercel.app"
+            url: "https://lambda-cancer-registry.vercel.app" 
           },
           {
             title: "Epidemiologische Auswertungen",
