@@ -1,72 +1,8 @@
-import Link from "next/link";
-import { Metadata } from "next";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Lambda | Moderne Datenlösungen für die Gesundheitsforschung",
-  description: "Maßgeschneiderte Datenlösungen und interaktive Berichte für Krebsregister und Gesundheitsinstitutionen",
-  keywords: ["Gesundheitsdaten", "Krebsregister", "Datenanalyse", "Dashboard", "Gesundheitsforschung"],
-};
-
-const Hero = () => (
-  <section className="relative py-20 md:py-32 overflow-hidden min-h-screen flex items-center">
-    <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
-    <div className="container mx-auto px-4 lg:px-8">
-      <div className="flex flex-col lg:flex-row items-start lg:items-center">
-        <div className="w-full lg:w-2/5">
-          <div className="flex flex-col items-start mb-6">
-            <span className="text-4xl font-bold text-emerald-500 dark:text-emerald-400 mb-2">λ</span>
-            <span className="inline-block px-4 py-1.5 text-sm font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/30 rounded-full border border-emerald-200 dark:border-emerald-800">
-              Lambda: moderne Datenlösungen
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-600 dark:from-white dark:via-slate-200 dark:to-emerald-400">
-            Datenlösungen für die <span className="text-emerald-600 dark:text-emerald-400">Gesundheitsforschung</span>
-          </h1>
-          <h2 className="text-2xl md:text-3xl text-slate-600 dark:text-slate-300 mb-6 max-w-2xl">
-            Maßgeschneiderte Datenlösungen für Krebsregister und Gesundheitsinstitutionen
-          </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-            Wir entwickeln maßgeschneiderte Datenlösungen für Krebsregister und Gesundheitsinstitutionen.
-            Modern, flexibel und kosteneffizient – ohne Kompromisse bei Qualität und Datensicherheit.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link 
-              href="#contact" 
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-colors shadow-lg hover:shadow-emerald-500/20"
-            >
-              Kontakt aufnehmen
-            </Link>
-            <a 
-              href="https://lambda-cancer-registry.vercel.app" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium py-3 px-6 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-block"
-            >
-              Meine Arbeit
-            </a>
-          </div>
-        </div>
-        <div className="w-full">
-          <div className="relative w-full lg:w-[32vw] max-w-3xl ml-auto mr-0 lg:mr-0 lg:translate-x-8 rounded-xl overflow-hidden shadow-2xl border-2 border-emerald-500/30 dark:border-emerald-400/30">
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              className="w-full h-auto rounded-lg"
-              poster="/data/Screen_Recording_2025_07_19_at_16_26_37_V1_poster.jpg"
-            >
-              <source src="/data/Screen_Recording_2025_07_19_at_16_26_37_V1.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
+import { useState } from 'react';
+import Hero from "./components/Hero";
+import PasswordModal from "./components/PasswordModal";
 
 const About = () => (
   <section id="about" className="section bg-white/50 dark:bg-slate-900/50">
@@ -106,81 +42,96 @@ const About = () => (
   </section>
 );
 
-const Work = () => (
-  <section id="work" className="section bg-slate-50/50 dark:bg-slate-900/50">
-    <div className="absolute inset-0 -z-10">
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px]"></div>
-    </div>
-    <div className="container mx-auto px-4">
-      <h2 className="section-title">Referenzprojekte</h2>
-      <p className="text-lg text-center text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12">
-        Unsere Lösungen bieten eine kosteneffiziente Alternative zu teuren Standardprodukten,
-        ohne dabei Einbußen bei Qualität oder Funktionalität hinnehmen zu müssen.
-      </p>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[
-          {
-            title: "Landeskrebsregister Dashboard",
-            description: "Maßgeschneidertes Dashboard für die Analyse von Krebsregisterdaten mit interaktiven Visualisierungen und Berichtsfunktionen.",
-            features: ["Echtzeit-Datenanalyse", "Individuelle Berichtsvorlagen", "Benutzerfreundliche Oberfläche"],
-            url: "https://lambda-cancer-registry.vercel.app" 
-          },
-          {
-            title: "Epidemiologische Auswertungen",
-            description: "Lösung für die Auswertung und Visualisierung epidemiologischer Daten mit Fokus auf Benutzerfreundlichkeit.",
-            features: ["Datenexport in verschiedene Formate", "Interaktive Diagramme", "Zugriffsverwaltung"]
-          },
-          {
-            title: "Datenintegration",
-            description: "Zentrale Plattform zur Integration verschiedener Datenquellen für umfassende Analysen.",
-            features: ["Automatisierte Datenaufbereitung", "Sichere Datenübertragung", "Skalierbare Architektur"]
-          }
-        ].map((project, index) => {
-          const content = (
-            <div className="h-full flex flex-col">
-              <div className="h-48 bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center p-6">
-                <span className="text-2xl text-white font-semibold text-center">{project.title}</span>
-              </div>
-              <div className="p-6 flex-grow flex flex-col">
-                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-4 flex-grow">
-                  {project.description}
-                </p>
-                <div className="mt-4 space-y-2">
-                  {project.features.map((feature, i) => (
-                    <div key={i} className="flex items-start">
-                      <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-slate-700 dark:text-slate-300">{feature}</span>
-                    </div>
-                  ))}
+const Work = () => {
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [redirectUrl, setRedirectUrl] = useState('');
+
+  const handleProjectClick = (url: string) => {
+    if (url) {
+      setRedirectUrl(url);
+      setShowPasswordModal(true);
+    }
+  };
+
+  return (
+    <section id="work" className="section bg-slate-50/50 dark:bg-slate-900/50">
+      <PasswordModal
+        isOpen={showPasswordModal}
+        onClose={() => setShowPasswordModal(false)}
+        redirectUrl={redirectUrl}
+      />
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      </div>
+      <div className="container mx-auto px-4">
+        <h2 className="section-title">Referenzprojekte</h2>
+        <p className="text-lg text-center text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12">
+          Unsere Lösungen bieten eine kosteneffiziente Alternative zu teuren Standardprodukten,
+          ohne dabei Einbußen bei Qualität oder Funktionalität hinnehmen zu müssen.
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Landeskrebsregister Dashboard",
+              description: "Maßgeschneidertes Dashboard für die Analyse von Krebsregisterdaten mit interaktiven Visualisierungen und Berichtsfunktionen.",
+              features: ["Echtzeit-Datenanalyse", "Individuelle Berichtsvorlagen", "Benutzerfreundliche Oberfläche"],
+              url: "https://lambda-cancer-registry.vercel.app" 
+            },
+            {
+              title: "Epidemiologische Auswertungen",
+              description: "Lösung für die Auswertung und Visualisierung epidemiologischer Daten mit Fokus auf Benutzerfreundlichkeit.",
+              features: ["Datenexport in verschiedene Formate", "Interaktive Diagramme", "Zugriffsverwaltung"]
+            },
+            {
+              title: "Datenintegration",
+              description: "Zentrale Plattform zur Integration verschiedener Datenquellen für umfassende Analysen.",
+              features: ["Automatisierte Datenaufbereitung", "Sichere Datenübertragung", "Skalierbare Architektur"]
+            }
+          ].map((project, index) => {
+            const content = (
+              <div className="h-full flex flex-col">
+                <div className="h-48 bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center p-6">
+                  <span className="text-2xl text-white font-semibold text-center">{project.title}</span>
+                </div>
+                <div className="p-6 flex-grow flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-400 mb-4 flex-grow">
+                    {project.description}
+                  </p>
+                  <div className="mt-4 space-y-2">
+                    {project.features.map((feature, i) => (
+                      <div key={i} className="flex items-start">
+                        <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-slate-700 dark:text-slate-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          );
+            );
 
-          return (
-            <div key={index} className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col h-full">
-              {project.url ? (
-                <a 
-                  href={project.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block h-full"
-                >
-                  {content}
-                </a>
-              ) : (
-                content
-              )}
-            </div>
-          );
-        })}
+            return (
+              <div key={index} className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col h-full">
+                {project.url ? (
+                  <div 
+                    onClick={() => handleProjectClick(project.url!)}
+                    className="block h-full cursor-pointer"
+                  >
+                    {content}
+                  </div>
+                ) : (
+                  content
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const Contact = () => (
   <section id="contact" className="section bg-white/50 dark:bg-slate-900/50">
@@ -189,7 +140,6 @@ const Contact = () => (
     </div>
     <div className="container mx-auto px-4">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="section-title">Kostenlose Erstberatung</h2>
         <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
           Interessieren Sie sich für eine kosteneffiziente Alternative zu teuren Standardlösungen?
           Vereinbaren Sie noch heute ein unverbindliches Beratungsgespräch.
@@ -230,7 +180,7 @@ export default function Home() {
       </div>
       <Hero />
       <About />
-      <Work />
+      <Work />  
       <Contact />
     </div>
   );
